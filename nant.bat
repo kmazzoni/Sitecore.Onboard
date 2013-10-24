@@ -1,0 +1,1 @@
+@tools\nant\nant-0.90\bin\nant.exe -buildfile:Sitecore.Onboard.build %* 

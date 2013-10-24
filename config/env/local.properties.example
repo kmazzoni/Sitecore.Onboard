@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8" ?>
+
+<project>	
+	<!-- Location of the Sitecore data directory -->
+	<property name="dir.data" value="D:\Projects\Sitecore.Onboard\web\Data\" /> <!-- Update this to point to your local data folder -->
+	
+	<!-- Whether or not to compile CodeFiles with debugging -->
+	<property name="compilation.debug" value="true" />
+	
+	<!-- Custom Errors mode -->
+	<property name="customerrors.mode" value="Off" />
+	
+	<!-- Connection Strings -->
+	<property name="core.db" value="user id=SitecoreUser;password=felixx;Data Source=monte2;Database=SitecoreOnboardSitecore_Core" /> <!-- Update connection string to point to your local Core database -->
+	<property name="master.db" value="user id=SitecoreUser;password=felixx;Data Source=monte2;Database=SitecoreOnboardSitecore_Master" /> <!-- Update connection string to point to your local Core database -->
+	<property name="web.db" value="user id=SitecoreUser;password=felixx;Data Source=monte2;Database=SitecoreOnboardSitecore_Web" /> <!-- Update connection string to point to your local Core database -->
+</project>

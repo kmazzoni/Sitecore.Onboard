@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<project>
+
+	<target name="help" description="Shows a help message">
+		<echo>
+			This is the Brookings Nant file.			
+			Try: nant -projecthelp for a list of tasks you can run			
+		</echo>
+	</target>
+
+	<target name="init" description="Copies all templates and replaces tokens">
+		<loadtasks assembly="${dir.tools}/nant/VelirNantTasks/VelirNantTasks.NVelocity.dll"/>			
+		<nvelocity>
+			<fileset>
+				<exclude name="${dir.web}/sitecore/**/*" />	
+				<include name="${dir.web}/**/*.template" />
+				<include name="${dir.sitecore}/**/*.template" />				
+			</fileset>
+		</nvelocity>
+		<nvelocity>
+			<fileset>
+				<exclude name="${dir.web}/sitecore/**/*" />					
+				<include name="${dir.web}/**/*.${env}" />				
+			</fileset>
+		</nvelocity>		
+	</target>		
+	
+	<target name="buildall" description="Builds the solution">
+		<loadtasks assembly="${dir.tools}/nant/nantcontrib-0.85/bin/NAnt.Contrib.Tasks.dll" />
+		<echo message="Building with configuration: ${build.configuration}" />
+		<msbuild project="endocrine.sln" verbosity="minimal">
+			<property name="Configuration" value="${build.configuration}" />					
+		</msbuild>
+	</target>
+	
+	<target name="clean" description="Cleans all of the target build directories">
+		<delete>
+			<fileset>
+				<include name="${dir.bin}\**\*" />
+			</fileset>
+		</delete>
+	</target> 
+			
+</project>

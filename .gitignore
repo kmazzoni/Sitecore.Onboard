@@ -106,3 +106,28 @@ Generated_Code #added for RIA/Silverlight projects
 _UpgradeReport_Files/
 Backup*/
 UpgradeLog*.XML
+
+# Sitecore
+web/Data/
+web/Website/App_Browsers/
+web/Website/App_Config/
+web/Website/bin_x64/
+web/Website/App_Data/
+web/Website/layouts/
+web/Website/sitecore/
+web/Website/sitecore modules/
+web/Website/sitecore_files/
+web/Website/temp/
+web/Website/test/
+web/Website/upload/
+web/Website/xsl/
+web/Website/Default.aspx
+web/Website/default.css
+web/Website/default.htm.sitedown
+web/Website/default.js
+web/Website/Design.config
+web/Website/Web.config
+web/Website/Web.config.webforms
+web/Website/Web.config.Oracle
+web/Website/Web.config.Oracle.Mvc
+web/Website/webedit.css
