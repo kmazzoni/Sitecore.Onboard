@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<project name="Sitecore.Onboard" default="help">
+
+	<!-- Bootstrap -->
+	<property name="dir.config" value="config" />
+	
+	<!-- Load the global environment -->
+	<property name="include.mask" value="${dir.config}/global.properties" />
+	<call target="-includeall" />
+	
+	<!-- Default targets -->
+	<property name="include.mask" value="${dir.config}/targets/*.targets" />
+	<call target="-includeall" />
+
+	<!-- Tell the user which environment we're using -->
+	<echo message="Using environment: ${env}" />
+
+	<!-- Load the properties for the configured environment -->
+	<include buildfile="${dir.config}/env/${env}.properties" failonerror="true" />
+
+	<!-- A target for including all the files in a directory -->
+	<target name="-includeall">
+		<foreach item="File" property="included.file">
+			<in>
+				<items>
+					<include name="${include.mask}" />
+				</items>
+			</in>
+			<do>
+				<include buildfile="${included.file}" failonerror="true" />
+			</do>
+		</foreach>
+	</target>
+	
+</project>
