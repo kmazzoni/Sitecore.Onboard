@@ -1,5 +1,5 @@
 # Build Folders (you can keep bin if you'd like, to store dlls and pdbs)
-[Bb]in/
+#[Bb]in/
 [Oo]bj/
 
 # mstest test results
@@ -89,7 +89,7 @@ csx
 AppPackages/
 
 # Others
-[Bb]in
+#[Bb]in
 [Oo]bj
 sql
 TestResults
@@ -113,6 +113,7 @@ web/Website/App_Browsers/
 web/Website/App_Config/
 web/Website/bin_x64/
 web/Website/App_Data/
+web/Website/bin
 web/Website/layouts/
 web/Website/sitecore/
 web/Website/sitecore modules/
